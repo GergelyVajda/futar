@@ -53,8 +53,27 @@ public class Futar {
    
     public static void main(String[] args) {
         String txt="tavok.txt";
-        String[] adatok=beolvas(txt);
-        int hossz=elemSzam(adatok);
+        String[] ideiglenes=beolvas(txt);
+        int hossz=elemSzam(ideiglenes);
+        //feldarabolás
+        String[] darabolt=new String[3];
+        Integer[][] adatok=new Integer[3][hossz];
+        for (int i = 0; i < hossz; i++) {
+            darabolt=ideiglenes[i].split(" ");
+            adatok[0][i]=Integer.parseInt(darabolt[0]);
+            adatok[1][i]=Integer.parseInt(darabolt[1]);
+            adatok[2][i]=Integer.parseInt(darabolt[2]);
+            //System.out.println(adatok[0][i]+" "+adatok[1][i]+" "+adatok[2][i]);
+        }
+        //2
+        int legn=0;
+        for (int i = 0; i < hossz; i++) {
+            if (adatok[0].equals(7)) {
+                if (adatok[1]>legn) {
+                    
+                }
+            }
+        }
         
     }
     
